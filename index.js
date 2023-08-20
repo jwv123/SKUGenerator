@@ -121,4 +121,4 @@ app.post("/delete/del", async (req, res) => {
 });
 db.connect(app.listen(3000, () => {
     console.log("Server running on port 3000");
-});
+}));
