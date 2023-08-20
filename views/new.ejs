@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate New Code</title>
+    <style>
+        a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate New Code</h1>
+    
+    <form action="/new/add" method="post">
+        <select id="type" name="type">
+            <option value="main">Main Department</option>
+            <option value="shirt">Shirts Department</option>
+            <option value="trouser">Trouser Department</option>
+            <option value="belt">Belt Department</option>
+            <option value="underwear">Underwear Department</option>
+            <option value="sock">Sock Department</option>
+            <option value="jersey">Jersey Department</option>
+            <option value="jacket">Jacket Department</option>
+            <option value="colour">Colour Range</option>
+            <option value="supplier">Supplier Code</option>
+            <option value="detail">Detail Description</option>
+        </select>
+        <input type="text" id="description" name="description" placeholder="Enter Description" />
+        <input type="text" name="code" id="code" placeholder="Enter Code" />
+        <button>Submit</button>
+    </form>
+    <a href="/">Code Index</a>
+    <a href="/generate">Generate New SKU</a>
+    <a href="/delete">Delete Code</a>
+</body>
+</html>

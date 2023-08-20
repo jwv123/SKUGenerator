@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated SKU</title>
+    <style>
+        a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+
+        <% for(let sku of skuList) { %>
+            <li><%= sku %></li>
+        <% } %>
+    </ul>
+    <a href="/">Code Index</a>
+    <a href="/generate">Generate New SKU</a>
+    <a href="/new">Add New Code</a>
+    <a href="/delete">Delete Code</a>
+</body>
+</html>

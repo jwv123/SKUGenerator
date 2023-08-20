@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate New SKU</h1>
+    
+    <form action="/generate/sku" method="post">
+        <label for="main">Main Department</label>
+        <select id="main" name="main">
+            <% for(let m of main) { %>
+                <option value=<%=m.code %>><%=m.description%></option>
+            <% } %>
+            
+        </select>
+        <br>
+        <label for="sub">Sub Department</label>
+            
+        <select id="sub" name="sub">
+            <option>Shirt Department</option>
+            <option value="">--------------------</option>
+            <% for(let s of shirt) { %>
+                <option value=<%=s.code %>><%=s.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Trouser Department</option>
+            <option value="">--------------------</option>
+            <% for(let t of trouser) { %>
+                <option value=<%=t.code %>><%=t.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Belt Department</option>
+            <option value="">--------------------</option>
+            <% for(let b of belt) { %>
+                <option value=<%=b.code %>><%=b.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Sock Department</option>
+            <option value="">--------------------</option>
+            <% for(let so of sock) { %>
+                <option value=<%=so.code %>><%=so.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Underwear Department</option>
+            <option value="">--------------------</option>
+            <% for(let u of underwear) { %>
+                <option value=<%=u.code %>><%=u.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Jersey Deparment</option>
+            <option value="">--------------------</option>
+            <% for(let je of jersey) { %>
+                <option value=<%=je.code %>><%=je.description%></option>
+            <% } %>
+            <option value="">--------------------</option>
+            <option value="">Jacket Department</option>
+            <option value="">--------------------</option>
+            <% for(let ja of jacket) { %>
+                <option value=<%=ja.code %>><%=ja.description%></option>
+            <% } %>
+        </select>
+        <br>
+        <label for="colour">Colour Range</label>
+        <select name="colour" id="colour">
+            <% for(let c of colour) { %>
+                <option value=<%=c.code %>><%=c.description%></option>
+            <% } %>
+        </select>
+        <br>
+        <label for="supplier">Supplier Code</label>
+        <select name="supplier" id="supplier">
+            <% for(let s of supplier) { %>
+                <option value=<%=s.code %>><%=s.description%></option>
+            <% } %>
+        </select>
+        <br>
+        <label for="size">Size Range</label>
+        <div id="size">
+            <input type="number" name="minsize" id="minsize" min="-2" max="76" />
+            <input type="number" name="maxsize" id="maxsize" min="-2" max="76" />
+            <label for="includexl">Include 'XL' Subfix</label>
+            <input type="checkbox" name="includexl" id="includexl" />
+        </div>
+        <br>
+        <label for="detail">Detail Description</label>
+        <select id="detail" name="detail">
+            <% for(let d of detail) { %>
+                <option value=<%=d.code %>><%=d.description%></option>
+            <% } %>
+        </select>
+        <br>
+        <button>Generate</button>
+    </form>
+    <a href="/">Code Index</a>
+    <a href="/new">Add New Code</a>
+    <a href="/delete">Delete Code</a>
+</body>
+</html>

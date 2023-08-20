@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Codes</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 7px;
+            vertical-align: top;
+        }
+
+        a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SKU Code Index</h1>
+    <a href="/generate">Generate SKU</a>
+    <a href="/new">Add New Code</a>
+    <a href="/delete">Delete Code</a>
+    <table>
+        <tr>
+            <th>Main Department</th>
+            <th>Sub Departments</th>
+            <th>Colours</th>
+            <th>Suppliers</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <% for(let m of main) { %>
+                    <li><%= m.code %> - <%= m.description %></li>
+                    <% } %>
+                </ul>
+            </td>
+            <td>
+                <p>Shirt Codes</p>
+                <ul>
+                    <% for(let s of shirt) { %>
+                        <li><%= s.code %> - <%= s.description %></li>
+                     <% } %>
+                </ul>
+                <p>Trouser Codes</p>
+                <ul>
+                    <% for(let t of trouser) { %>
+                        <li><%= t.code %> - <%= t.description %></li>
+                     <% } %>
+                </ul>
+                <p>Belt Codes</p>
+                <ul>
+                    <% for(let b of belt) { %>
+                        <li><%= b.code %> - <%= b.description %></li>
+                     <% } %>
+                </ul>
+                <p>Sock Codes</p>
+                <ul>
+                    <% for(let so of sock) { %>
+                        <li><%= so.code %> - <%= so.description %></li>
+                     <% } %>
+                </ul>
+                <p>Underwear Codes</p>
+                <ul>
+                    <% for(let u of underwear) { %>
+                        <li><%= u.code %> - <%= u.description %></li>
+                     <% } %>
+                </ul>
+                <p>Jersey Codes</p>
+                <ul>
+                    <% for(let je of jersey) { %>
+                        <li><%= je.code %> - <%= je.description %></li>
+                     <% } %>
+                </ul>
+                <p>Jacket Codes</p>
+                <ul>
+                    <% for(let ja of jacket) { %>
+                        <li><%= ja.code %> - <%= ja.description %></li>
+                     <% } %>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <% for(let c of colour) { %>
+                        <li><%= c.code %> - <%= c.description %></li>
+                     <% } %>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <% for(let sup of supplier) { %>
+                        <li><%= sup.code %> - <%= sup.description %></li>
+                     <% } %>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <% for(let det of detail) { %>
+                        <li><%= det.code %> - <%= det.description %></li>
+                     <% } %>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
